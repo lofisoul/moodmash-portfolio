@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang=eng>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://use.fontawesome.com/94c6d5d787.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://use.fontawesome.com/94c6d5d787.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>MoodMash</title>
+</head>
+
+<body id="gradient">
+    <!-- First screen -->
+    <div id="app-intro" class="stage container-fluid">
+      <div class="inner">
+        <h1>Mood <em class="fa fa-spotify"></em> Mash</h1>
+        <h2>Start Feelin'</h2>
+        <div class="form-group">
+            <a class="btn btn-default btn-lg" id="btn-auth" href="/login">Login with your Spotify</a>
+        </div>
+      </div>
+    </div>
+    <!-- Second screen -->
+    <div id="app-login" class="stage container-fluid" style="display:none;">
+      <div class="inner">
+        <h2>Help us set the mood</h2>
+        <form id="new-log-in" class="form-group">
+            <label for="city">Type in your city</label>
+            <input class="form-control" id="city" type="text">
+            <input class="btn btn-default btn-lg" id="add-city" type="submit" value="Let's Jam!">
+        </form>
+      </div>
+    </div>
+    <!-- Main App area -->
+    <div id="app-main" style="display:none">
+      <h2>Today I'm Feeling...</h2>
+        <div class="button-wrap row" id="emotions">
+          <div class="btn-out">
+            <button class="btn btn-lg btn-mood b" data-emo="Productive"><span>Productive</span></button>
+          </div>
+          <div class="btn-out">
+                <button class="btn btn-lg btn-mood a" data-emo="Worked Up"><span>Worked up</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood z" data-emo="Puzzled"><span>Puzzled</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood e" data-emo="Exhausted"><span>Exhausted</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood b" data-emo="Determined"><span>Determined</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood v" data-emo="Political"><span>Political</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood i" data-emo="Possessed"><span>Possessed</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood a" data-emo="Touchy"><span>Touchy</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood z " data-emo="Frustrated"><span>Frustrated</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood g" data-emo="Blissful"><span>Blissful</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood c" data-emo="Dreamy"><span>Dreamy</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood gh" data-emo="Playful"><span>Playful</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood j" data-emo="Lit"><span>Lit</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood f" data-emo="Frisky"><span>Frisky</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood d" data-emo="Emo"><span>Emo</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood c" data-emo="Uplifted"><span>Uplifted</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood z" data-emo="Overwhelmed"><span>Overwhelmed</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood b" data-emo="Accomplished"><span>Accomplished</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood e" data-emo="Sleepy"><span>Sleepy</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood b" data-emo="Studious"><span>Studious</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood c" data-emo="Zen"><span>Zen</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood l" data-emo="Swole"><span>Swole</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood l" data-emo="Pumped"><span>Pumped</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood g" data-emo="Jubilant"><span>Jubilant</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood e" data-emo="Washed"><span>Washed</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood d" data-emo="Morose"><span>Morose</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood e" data-emo="Lazy"><span>Lazy</span></button>
+              </div>
+              <div class="btn-out">
+                <button class="btn btn-lg btn-mood a" data-emo="Hangry"><span>Hangry</span></button>
+              </div>
+        </div>
+        <div id="drawer" class="stage container-fluid">
+          <div class="close-btn text-center">
+          <button class="btn btn-default btn-lg" id="diff">Feeling Differently?</button>
+        </div>
+          <div class="row">
+          <div class="col-sm-7 col-md-8 drawer-content">
+          <div id="city-mood">
+              <h3>Fellow Mood Mashers in Your City Have Been Feeling...</h3>
+              <div id="recent-moods"> </div>
+          </div>
+
+            <h2 id="moodDiv"></h2>
+            <div id="player">
+                <div id="playerLayer">
+                    <div id="widget-container"></div>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-5 col-md-4">
+            <div id="suggestions">
+                <div id="suggestionsLayer">
+                  <div class="text-center">
+                      <button class="btn btn-default btn-lg" id="showsInTown">Feel it live</button>
+                    </div>
+                    <div id="artist-events"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!--here's our spotify login modal-->
+    <div class="modal">
+        <div class="inner">
+            <h2>Whoops!</h2>
+            <p>Looks like you need to reauthorize the app</p>
+            <a class="btn btn-default btn-lg" id="btn-auth" href="index.html">Login with your Spotify</a>
+        </div>
+    </div>
+    <!-- Other stuff -->
+    <!--adding in moment to convert date string-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/js/ui.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+</html>

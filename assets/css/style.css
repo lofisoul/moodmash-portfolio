@@ -1,0 +1,218 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background: pink;
+  padding: 15px; }
+
+body, html {
+  height: 100%; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: 'Abril Fatface', serif; }
+
+.btn-default {
+  background-color: #24CF5f;
+  border-color: #24CF5f;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .btn-default:hover {
+    background-color: #19e68c;
+    border-color: #19e68c; }
+
+.stage {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 15px;
+  border-radius: 4px;
+  height: 100%;
+  position: relative;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); }
+  .stage .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px); }
+
+#app-intro {
+  text-align: center; }
+  #app-intro h1 {
+    margin-bottom: 10px;
+    color: #19e68c; }
+  #app-intro h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif; }
+
+#app-login {
+  text-align: center; }
+  #app-login h2 {
+    margin-bottom: 20px; }
+  #app-login .form-group {
+    max-width: 450px;
+    margin: 0 auto; }
+  #app-login label {
+    margin-bottom: 10px; }
+  #app-login input#city {
+    margin-bottom: 25px; }
+
+#app-main {
+  margin: 0 auto;
+  max-width: 600px;
+  padding-bottom: 30px; }
+  #app-main > h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000; }
+  #app-main .button-wrap {
+    margin: 0 -2px; }
+  #app-main .btn-out {
+    width: 33.33333333%;
+    padding-bottom: 33.33333333%;
+    float: left;
+    padding: 2px; }
+    #app-main .btn-out > .btn {
+      border-radius: 0;
+      display: block;
+      padding-bottom: 100%;
+      position: relative;
+      width: 100%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      text-shadow: 1px 1px 0px #000;
+      box-shadow: 0px 0px 0px 0px transparent;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      #app-main .btn-out > .btn:hover {
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+      #app-main .btn-out > .btn > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+
+.btn[data-emo="Productive"] {
+  background-color: #24CF5f; }
+.btn[data-emo="Worked Up"] {
+  background-color: #FD373A; }
+.btn[data-emo="Puzzled"] {
+  background-color: #6F65F4; }
+.btn[data-emo="Exhausted"] {
+  background-color: #4C84A5; }
+.btn[data-emo="Determined"] {
+  background-color: #FD6895; }
+.btn[data-emo="Political"] {
+  background-color: #FD7B47; }
+.btn[data-emo="Possessed"] {
+  background-color: #FC6721; }
+.btn[data-emo="Touchy"] {
+  background-color: #FD999B; }
+.btn[data-emo="Frustrated"] {
+  background-color: #FC373A; }
+.btn[data-emo="Blissful"] {
+  background-color: #CCFE9D; }
+.btn[data-emo="Dreamy"] {
+  background-color: #547DBE; }
+.btn[data-emo="Playful"] {
+  background-color: #80D228; }
+.btn[data-emo="Lit"] {
+  background-color: #FFFE72; }
+.btn[data-emo="Frisky"] {
+  background-color: #FD666A; }
+.btn[data-emo="Emo"] {
+  background-color: #874CDA; }
+.btn[data-emo="Uplifted"] {
+  background-color: #44A451; }
+.btn[data-emo="Overwhelmed"] {
+  background-color: #FC69AE; }
+.btn[data-emo="Accomplished"] {
+  background-color: #6ACA25; }
+.btn[data-emo="Sleepy"] {
+  background-color: #418E83; }
+.btn[data-emo="Studious"] {
+  background-color: #FED431; }
+.btn[data-emo="Zen"] {
+  background-color: #CDFE9D; }
+.btn[data-emo="Swole"] {
+  background-color: #FDB52C; }
+.btn[data-emo="Pumped"] {
+  background-color: #FED932; }
+.btn[data-emo="Jubilant"] {
+  background-color: #FEFC38; }
+.btn[data-emo="Washed"] {
+  background-color: #CDFE9E; }
+.btn[data-emo="Morose"] {
+  background-color: #BA4DDC; }
+.btn[data-emo="Lazy"] {
+  background-color: #BAE62F; }
+.btn[data-emo="Hangry"] {
+  background-color: #FD676A; }
+
+@media screen and (min-width: 768px) {
+  #app-main .btn-out > .btn {
+    font-size: 16px; } }
+#drawer {
+  position: fixed;
+  background: #fff;
+  top: 100%;
+  width: calc(100% - 30px);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: auto;
+  left: 15px; }
+  #drawer.active {
+    top: 0; }
+  #drawer .close-btn {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f4f4f4; }
+  #drawer #moodDiv {
+    text-align: center;
+    margin: 20px 0;
+    color: #4b917d; }
+  #drawer #player {
+    margin-bottom: 20px; }
+  #drawer #artist-events {
+    display: none;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #drawer #artist-events h3 {
+      margin-bottom: 20px;
+      color: #4b917d; }
+    #drawer #artist-events .event-div {
+      border-bottom: 1px solid #f4f4f4;
+      padding: 10px 0; }
+      #drawer #artist-events .event-div:last-child {
+        border: 0; }
+      #drawer #artist-events .event-div h4 {
+        font-size: 13px; }
+
+@media screen and (min-width: 768px) {
+  .drawer-content {
+    border-right: 1px solid #4b917d;
+    padding: 0 60px; } }
+#city-mood {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */
