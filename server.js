@@ -7,9 +7,9 @@ var cookieParser = require('cookie-parser');
 var client_id = 'e47bbc49931e47c9b58e0418a2d7f472';
 var client_secret = '3e6111715f0a44eb871a290db9f148bf';
 //local testing
-var redirect_uri = 'http://localhost:9000/callback';
+// var redirect_uri = 'http://localhost:9000/callback';
 //heroku deployment
-//var redirect_uri = 'https://moodmash.herokuapp.com/callback';
+var redirect_uri = 'https://secure-wildwood-79209.herokuapp.com/';
 var user_id = '';
 
 var PORT = process.env.PORT || 9000;
