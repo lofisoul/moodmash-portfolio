@@ -3,10 +3,6 @@ This is a revamp of a Spotify app done for a group project for the Coding Bootca
 
 Thanks to my teammates:
 
-Terri Hammons (https://github.com/tmhammons91)
-
-Emily Pulskamp (https://github.com/emkamp)
-
-Kwaku Acheampong (https://github.com/Kwaku60)
+Terri Hammons (https://github.com/tmhammons91)<br>Emily Pulskamp (https://github.com/emkamp)<br>Kwaku Acheampong (https://github.com/Kwaku60)
 
 Check them out!
